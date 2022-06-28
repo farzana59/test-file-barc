@@ -1,21 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { withRouter } from "react-router-dom";
 
 function AdminForm(props) {
-  const [state, setState] = useState({
-    email: "",
-    password: "",
-    successMessage: null,
-  });
-  const handleChange = (e) => {
-    const { id, value } = e.target;
-    setState((prevState) => ({
-      ...prevState,
-      [id]: value,
-    }));
-  };
+  
+  
 
-  const handleSubmitClick = (e) => {
+  const handleSubmitClick = () => {
     redirectToDashboard();
   };
   const redirectToDashboard = () => {
@@ -69,13 +59,7 @@ function AdminForm(props) {
           Submit
         </button>
       </form>
-      <div
-        className="alert alert-success mt-2"
-        style={{ display: state.successMessage ? "block" : "none" }}
-        role="alert"
-      >
-        {state.successMessage}
-      </div>
+      
       <div className="registerMessage">
         <span className="loginText" onClick={() => redirectToDashboard()}>
           Go back

@@ -37,7 +37,7 @@ function AdminDashboard(props) {
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td>Mark</td>
+            <td>PDF 1</td>
             <td>
               <CheckCircleFillIcon size={16} fill="green" />
             </td>
@@ -48,7 +48,7 @@ function AdminDashboard(props) {
           </tr>
           <tr>
             <th scope="row">2</th>
-            <td>Jacob</td>
+            <td>PDF 2</td>
             <td>
               <XCircleFillIcon size={16} fill="red" />
             </td>
@@ -59,7 +59,7 @@ function AdminDashboard(props) {
           </tr>
           <tr>
             <th scope="row">3</th>
-            <td>Larry</td>
+            <td>PDF 3</td>
             <td>
               <XCircleFillIcon size={16} fill="red" />
             </td>
