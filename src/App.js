@@ -1,19 +1,14 @@
 import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
-import LoginForm from "./components/LoginForm/LoginForm";
-import RegistrationForm from "./components/RegistrationForm/RegistrationForm";
-import Home from "./components/Home/Home";
-import PrivateRoute from "./utils/PrivateRoute";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import AlertComponent from "./components/AlertComponent/AlertComponent";
 import Dashboard from "./components/Dashboard/Dashboard";
 import AdminDashboard from "./components/Admin/AdminDashboard";
 import AdminForm from "./components/Admin/AdminForm";
 
 function App() {
   const [title, updateTitle] = useState(null);
-  const [errorMessage, updateErrorMessage] = useState(null);
+  
   return (
     <Router>
       <div className="App">
@@ -25,37 +20,19 @@ function App() {
             </Route>
             <Route path="/admin/dashboard">
               <AdminDashboard
-                showError={updateErrorMessage}
+                
                 updateTitle={updateTitle}
               />
             </Route>
             <Route path="/admin/form">
               <AdminForm
-                showError={updateErrorMessage}
+                
                 updateTitle={updateTitle}
               />
             </Route>
-            <Route path="/register">
-              <RegistrationForm
-                showError={updateErrorMessage}
-                updateTitle={updateTitle}
-              />
-            </Route>
-            <Route path="/login">
-              <LoginForm
-                showError={updateErrorMessage}
-                updateTitle={updateTitle}
-              />
-            </Route>
-            <PrivateRoute path="/home">
-              <Home />
-            </PrivateRoute>
-          </Switch>
-          <AlertComponent
-            errorMessage={errorMessage}
-            hideError={updateErrorMessage}
-          />
-        </div>
+           </Switch> 
+         </div>   
+            
       </div>
     </Router>
   );

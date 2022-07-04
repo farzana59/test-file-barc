@@ -3,11 +3,11 @@ A project to demonstrate usage of basic react.js hooks
 
 
 ### App Part 1:      
-![Screenshot]()   
+![Screenshot](barc 1.PNG)   
 
 
 ### App Part 2:   
-![Screenshot]()   
+![Screenshot](barc 2.PNG)   
 
 
 
